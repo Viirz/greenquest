@@ -52,9 +52,11 @@
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a href="#page-top" class="page-scroll">
+                    <img src="assets/welcome/img/logo_bg.png" class="logo-nav" alt="Logo">
+                </a>
 
-                    <img src="assets/welcome/img/logo_bg.png" class="logo-nav" href="#page-top"/>
-                
+
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
