@@ -1,17 +1,79 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta property="fb:pages" content="110128820399183" />
+        <meta property="og:url" content="https://teamtrees.org" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Help Us Plant 20 Million Trees - Join #TeamTrees" />
+        <meta property="og:description" content="The official site of #TeamTrees. One dollar plants a tree..." />
+        <meta property="og:image" content="https://teamtrees.org/images/social-share-earth-astronaut-1-9x1.png" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous" />
+        <!-- Google Fonts CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <!-- teamtrees CSS -->
+        <link href="assets/dashboard/css/main.min.css" rel="stylesheet" />
+        <link href="assets/dashboard/css/odometer.css" rel="stylesheet" />
+        <title>#teamtrees</title>
+
+        <style>
+            .hero-background {
+                height: 100vh;
+            }
+
+            #link {
+                color: inherit !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="hero-background mb-0">
+            <img class="cloud" id="cloud-1" src="assets/dashboard/images/cloud.svg" />
+            <img class="cloud" id="cloud-2" src="assets/dashboard/images/cloud-translucent.svg" />
+            <img class="cloud" id="cloud-3" src="assets/dashboard/images/cloud.svg" />
+            <img class="cloud" id="cloud-4" src="assets/dashboard/images/cloud-translucent.svg" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mx-auto">
+                        <div class="text-center intro-copy">
+                            <h1 class="text-uppercase d-none">#teamtrees</h1>
+                            <h1 class="text-center">
+                                <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees"
+                                    src="assets/dashboard/images/logo-teamtrees-full.svg" />
+                            </h1>
+                            <p class="lead mb-2">
+                                Help us plant 20 million trees around the globe by January 1st,
+                                2020.
+                            </p>
+
+                            <div class="counter-wrap">
+                                <div id="totalTrees" class="counter odometer">0</div>
+                                <div class="measure-wrap">
+                                    <span class="text-uppercase letter-spacing" style="top: 4px">Trees Planted</span>
+                                    <img class="counter-underline" src="assets/dashboard/images/counter-underline-blue.svg" />
+                                    <br />
+                                    <a href="https://teamtrees.org/" class="text-uppercase letter-spacing" id="link"
+                                        style="top: 4px">Donate at teamtrees.org!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+
+    </body>
+
+    </html>
+
 </x-app-layout>
