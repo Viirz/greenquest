@@ -33,6 +33,8 @@
                 color: inherit !important;
             }
         </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -56,10 +58,11 @@
                             </p>
 
                             <div class="counter-wrap">
-                                <div id="totalTrees" class="counter odometer">0</div>
+                                <div id="totalTrees" class="counter odometer"></div>
                                 <div class="measure-wrap">
-                                    <span class="text-uppercase letter-spacing" style="top: 4px">Trees Planted</span>
-                                    <img class="counter-underline" src="assets/dashboard/images/counter-underline-blue.svg" />
+                                    <span class="text-uppercase letter-spacing" style="top: 4px">Total Donation</span>
+                                    <img class="counter-underline"
+                                        src="assets/dashboard/images/counter-underline-blue.svg" />
                                     <br />
                                     <a href="https://teamtrees.org/" class="text-uppercase letter-spacing" id="link"
                                         style="top: 4px">Donate at teamtrees.org!</a>
@@ -72,6 +75,24 @@
         </div>
 
 
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                setInterval(function () {
+                    $.ajax({
+                        url: '/donations/sum', // replace with your endpoint
+                        type: 'GET',
+                        success: function (data) {
+                            // assuming the server returns the new total trees count
+                            $('#totalTrees').text(data.sum);
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
+                }, 1000); // 1000 milliseconds = 1 seconds
+            });
+        </script>
     </body>
 
     </html>
