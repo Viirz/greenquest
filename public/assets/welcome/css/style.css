@@ -410,22 +410,29 @@ ol.type li a:hover {
 .hover-bg:hover .hover-text {
   opacity: 1;
 }
-/* Testimonials Section */
-#testimonials {
+/* FAQs Section */
+#faqs {
   background: #444 url(../img/testimonials-bg.jpg) center center no-repeat fixed;
   background-size: cover;
+  color: #fff;
 }
-#testimonials .overlay {
+#faqs .overlay {
   padding: 120px 0;
   background: rgba(106, 175, 8, 0.85);
 }
-#testimonials h2 {
+#faqs h2 {
   color: #fff;
 }
-#testimonials hr {
+#faqs hr {
   background: rgba(255, 255, 255, 0.6);
 }
-#testimonial p {
+#faqs .faq-question { /* Mengubah class menjadi .faq-question untuk mencocokkan HTML */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold; /* Membuat tebal (bold) */
+  line-height: 32px;
+}
+#faqs .faq-answer { /* Mengubah class menjadi .faq-answer untuk mencocokkan HTML */
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -454,6 +461,7 @@ ol.type li a:hover {
   background: #fff;
   border: 1px solid #fff;
 }
+
 /* Contact Section */
 #contact {
   padding: 100px 0;

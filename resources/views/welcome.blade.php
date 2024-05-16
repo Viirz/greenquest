@@ -66,7 +66,7 @@
                     <li><a href="#services" class="page-scroll">Partner</a></li>
                     <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
                     <li>
-                        <a href="#testimonials" class="page-scroll">Testimonials</a>
+                        <a href="#FAQs" class="page-scroll">FAQs</a>
                     </li>
                     <li><a href="#contact" class="page-scroll">Contact</a></li>
                     @if (Route::has('login'))
@@ -394,52 +394,44 @@
             </div>
         </div>
     </div>
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="text-center">
+    <!-- FAQs Section -->
+    <div id="faqs" class="text-center">
         <div class="overlay">
             <div class="container">
                 <div class="section-title">
-                    <h2>Testimonials</h2>
+                    <h2>FAQs</h2>
                     <hr />
                 </div>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div id="testimonial" class="owl-carousel owl-theme">
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- John DOE, Parker County, TX</p>
+                                <div class="faq-question">What is GreenQuest's mission?</div>
+                                <div class="faq-answer">GreenQuest's mission is to promote environmental sustainability
+                                    through tree planting and conservation efforts.
+                                </div>
                             </div>
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- Jenny DOE, Parker County, TX</p>
+                                <div class="faq-question">How can I get involved with GreenQuest?</div>
+                                <div class="faq-answer">You can get involved with GreenQuest by volunteering for tree
+                                    planting events,
+                                    donating to support our projects, or spreading awareness about our mission.
+                                </div>
                             </div>
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- John DOE, Parker County, TX</p>
+                                <div class="faq-question">How does GreenQuest ensure the sustainability of its projects?
+                                </div>
+                                <div class="faq-answer">GreenQuest works closely with local communities and
+                                    environmental experts to
+                                    ensure that tree planting projects are sustainable and have a positive long-term
+                                    impact.
+                                </div>
                             </div>
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- John DOE, Parker County, TX</p>
+                                <div class="faq-question">Is my donation tax-deductible?</div>
+                                <div class="faq-answer">Yes, donations made to GreenQuest are tax deductible to the
+                                    extent allowed by
+                                    law. Please consult with your tax advisor for more information.</div>
                             </div>
                         </div>
                     </div>
