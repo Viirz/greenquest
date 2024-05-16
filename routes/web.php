@@ -21,4 +21,8 @@ use App\Http\Controllers\DonationController;
 
 Route::get('/donations/sum', [DonationController::class, 'sum']);
 
+use App\Http\Controllers\NewsController;
+
+Route::get('/news', [NewsController::class, 'index']);
+
 require __DIR__.'/auth.php';
