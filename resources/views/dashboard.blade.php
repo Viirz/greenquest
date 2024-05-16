@@ -58,7 +58,7 @@
                             </p>
 
                             <div class="counter-wrap">
-                                <div id="totalTrees" class="counter odometer"></div>
+                                <div id="totalTrees" class="counter odometer"> 0</div>
                                 <div class="measure-wrap">
                                     <span class="text-uppercase letter-spacing" style="top: 4px">Total Donation</span>
                                     <img class="counter-underline"

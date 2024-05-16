@@ -71,28 +71,32 @@
                     <li><a href="#contact" class="page-scroll">Contact</a></li>
                     @if (Route::has('login'))
 
-                        @auth
-                            <a href="{{ url('/dashboard') }}"
-                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                Dashboard
-                            </a>
-                        @else
-                            <li>
-                                <a href="{{ route('login') }}"
-                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                    Log in
-                                </a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li>
-                                    <a href="{{ route('register') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                        Register
-                                    </a>
+                            @auth
+                                    <li>
+                                        <a href="{{ url('/dashboard') }}"
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                            Dashboard
+                                        </a>
+                                </ul>
                                 </li>
 
-                            @endif
-                        @endauth
+                            @else
+                                <li>
+                                    <a href="{{ route('login') }}"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                        Log in
+                                    </a>
+                                </li>
+                                @if (Route::has('register'))
+                                    <li>
+                                        <a href="{{ route('register') }}"
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                            Register
+                                        </a>
+                                    </li>
+
+                                @endif
+                            @endauth
 
                     @endif
                 </ul>
