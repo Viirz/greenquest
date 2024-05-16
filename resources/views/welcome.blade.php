@@ -46,8 +46,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -69,9 +68,12 @@
                         <a href="#testimonials" class="page-scroll">Testimonials</a>
                     </li>
                     <li><a href="#contact" class="page-scroll">Contact</a></li>
-                    @if (Route::has('login'))
+                    
+
+                        @if (Route::has('login'))
 
                         @auth
+
                             <li>
                                 <a href="{{ url('/dashboard') }}"
                                     class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
@@ -79,26 +81,24 @@
                                 </a>
 
                             </li>
-
                         @else
-                            <li>
-                                <a href="{{ route('login') }}"
-                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                    Log in
-                                </a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li>
-                                    <a href="{{ route('register') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                        Register
-                                    </a>
-                                </li>
-
-                            @endif
-                        @endauth
+                    <li>
+                        <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                            Log in
+                        </a>
+                    </li>
+                    @if (Route::has('register'))
+                    <li>
+                        <a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                            Register
+                        </a>
+                    </li>
 
                     @endif
+                    @endauth
+
+                    @endif
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -267,13 +267,11 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/01-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Lorem Ipsum</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/01-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -281,13 +279,11 @@
                     <div class="col-sm-6 col-md-4 planting">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/02-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Adipiscing Elit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/02-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -295,13 +291,11 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/03-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Lorem Ipsum</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/03-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -309,13 +303,11 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/04-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Lorem Ipsum</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/04-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -323,13 +315,11 @@
                     <div class="col-sm-6 col-md-4 planting">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/05-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Adipiscing Elit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/05-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -337,13 +327,11 @@
                     <div class="col-sm-6 col-md-4 garden">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/06-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dolor Sit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/06-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -351,13 +339,11 @@
                     <div class="col-sm-6 col-md-4 garden">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/07-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dolor Sit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/07-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -365,13 +351,11 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/08-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Lorem Ipsum</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/08-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -379,13 +363,11 @@
                     <div class="col-sm-6 col-md-4 planting">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/09-large.jpg" title="Project Title"
-                                    data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Adipiscing Elit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/09-small.jpg" class="img-responsive"
-                                        alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -490,22 +472,19 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Name"
-                                    required="required" />
+                                <input type="text" id="name" class="form-control" placeholder="Name" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Email"
-                                    required="required" />
+                                <input type="email" id="email" class="form-control" placeholder="Email" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message"
-                            required></textarea>
+                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                     <div id="success"></div>

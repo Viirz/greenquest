@@ -93,6 +93,7 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
             'Spatie\\Ignition\\' => 16,
             'Spatie\\FlareClient\\' => 19,
             'Spatie\\Backtrace\\' => 17,
+            'Shift\\Faker\\' => 12,
         ),
         'R' => 
         array (
@@ -135,6 +136,10 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
             'Laravel\\Sail\\' => 13,
             'Laravel\\Prompts\\' => 16,
             'Laravel\\Breeze\\' => 15,
+        ),
+        'J' => 
+        array (
+            'JMac\\Testing\\' => 13,
         ),
         'I' => 
         array (
@@ -180,6 +185,7 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'Blueprint\\' => 10,
             'Backpack\\ThemeTabler\\' => 21,
             'Backpack\\Generators\\' => 20,
             'Backpack\\CRUD\\' => 14,
@@ -348,6 +354,10 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         array (
             0 => __DIR__ . '/..' . '/spatie/backtrace/src',
         ),
+        'Shift\\Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-shift/faker-registry/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -457,6 +467,10 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         array (
             0 => __DIR__ . '/..' . '/laravel/breeze/src',
         ),
+        'JMac\\Testing\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jasonmccreary/laravel-test-assertions/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -556,6 +570,10 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         'Brick\\Math\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
+        ),
+        'Blueprint\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-shift/blueprint/src',
         ),
         'Backpack\\ThemeTabler\\' => 
         array (
@@ -787,6 +805,63 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         'Backpack\\Generators\\Services\\BackpackCommand' => __DIR__ . '/..' . '/backpack/generators/src/Services/BackpackCommand.php',
         'Backpack\\ThemeTabler\\AddonServiceProvider' => __DIR__ . '/..' . '/backpack/theme-tabler/src/AddonServiceProvider.php',
         'Backpack\\ThemeTabler\\View\\Components\\MenuDropdownColumn' => __DIR__ . '/..' . '/backpack/theme-tabler/src/View/Components/MenuDropdownColumn.php',
+        'Blueprint\\Blueprint' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Blueprint.php',
+        'Blueprint\\BlueprintServiceProvider' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/BlueprintServiceProvider.php',
+        'Blueprint\\Builder' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Builder.php',
+        'Blueprint\\Commands\\BuildCommand' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Commands/BuildCommand.php',
+        'Blueprint\\Commands\\EraseCommand' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Commands/EraseCommand.php',
+        'Blueprint\\Commands\\InitCommand' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Commands/InitCommand.php',
+        'Blueprint\\Commands\\NewCommand' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Commands/NewCommand.php',
+        'Blueprint\\Commands\\PublishStubsCommand' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Commands/PublishStubsCommand.php',
+        'Blueprint\\Commands\\TraceCommand' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Commands/TraceCommand.php',
+        'Blueprint\\Concerns\\HandlesImports' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Concerns/HandlesImports.php',
+        'Blueprint\\Concerns\\HandlesTraits' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Concerns/HandlesTraits.php',
+        'Blueprint\\Contracts\\Generator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Contracts/Generator.php',
+        'Blueprint\\Contracts\\Lexer' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Contracts/Lexer.php',
+        'Blueprint\\Contracts\\Model' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Contracts/Model.php',
+        'Blueprint\\FileMixins' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/FileMixins.php',
+        'Blueprint\\Generators\\AbstractClassGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/AbstractClassGenerator.php',
+        'Blueprint\\Generators\\ControllerGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/ControllerGenerator.php',
+        'Blueprint\\Generators\\FactoryGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/FactoryGenerator.php',
+        'Blueprint\\Generators\\MigrationGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/MigrationGenerator.php',
+        'Blueprint\\Generators\\ModelGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/ModelGenerator.php',
+        'Blueprint\\Generators\\PestTestGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/PestTestGenerator.php',
+        'Blueprint\\Generators\\PhpUnitTestGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/PhpUnitTestGenerator.php',
+        'Blueprint\\Generators\\PolicyGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/PolicyGenerator.php',
+        'Blueprint\\Generators\\RouteGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/RouteGenerator.php',
+        'Blueprint\\Generators\\SeederGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/SeederGenerator.php',
+        'Blueprint\\Generators\\StatementGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/StatementGenerator.php',
+        'Blueprint\\Generators\\Statements\\EventGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/Statements/EventGenerator.php',
+        'Blueprint\\Generators\\Statements\\FormRequestGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/Statements/FormRequestGenerator.php',
+        'Blueprint\\Generators\\Statements\\JobGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/Statements/JobGenerator.php',
+        'Blueprint\\Generators\\Statements\\MailGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/Statements/MailGenerator.php',
+        'Blueprint\\Generators\\Statements\\NotificationGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/Statements/NotificationGenerator.php',
+        'Blueprint\\Generators\\Statements\\ResourceGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/Statements/ResourceGenerator.php',
+        'Blueprint\\Generators\\Statements\\ViewGenerator' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Generators/Statements/ViewGenerator.php',
+        'Blueprint\\Lexers\\ConfigLexer' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Lexers/ConfigLexer.php',
+        'Blueprint\\Lexers\\ControllerLexer' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Lexers/ControllerLexer.php',
+        'Blueprint\\Lexers\\ModelLexer' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Lexers/ModelLexer.php',
+        'Blueprint\\Lexers\\SeederLexer' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Lexers/SeederLexer.php',
+        'Blueprint\\Lexers\\StatementLexer' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Lexers/StatementLexer.php',
+        'Blueprint\\Models\\Column' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Column.php',
+        'Blueprint\\Models\\Controller' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Controller.php',
+        'Blueprint\\Models\\Index' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Index.php',
+        'Blueprint\\Models\\Model' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Model.php',
+        'Blueprint\\Models\\Policy' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Policy.php',
+        'Blueprint\\Models\\Statements\\DispatchStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/DispatchStatement.php',
+        'Blueprint\\Models\\Statements\\EloquentStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/EloquentStatement.php',
+        'Blueprint\\Models\\Statements\\FireStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/FireStatement.php',
+        'Blueprint\\Models\\Statements\\QueryStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/QueryStatement.php',
+        'Blueprint\\Models\\Statements\\RedirectStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/RedirectStatement.php',
+        'Blueprint\\Models\\Statements\\RenderStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/RenderStatement.php',
+        'Blueprint\\Models\\Statements\\ResourceStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/ResourceStatement.php',
+        'Blueprint\\Models\\Statements\\RespondStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/RespondStatement.php',
+        'Blueprint\\Models\\Statements\\SendStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/SendStatement.php',
+        'Blueprint\\Models\\Statements\\SessionStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/SessionStatement.php',
+        'Blueprint\\Models\\Statements\\ValidateStatement' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Models/Statements/ValidateStatement.php',
+        'Blueprint\\Tracer' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Tracer.php',
+        'Blueprint\\Translators\\Rules' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Translators/Rules.php',
+        'Blueprint\\Tree' => __DIR__ . '/..' . '/laravel-shift/blueprint/src/Tree.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -3372,6 +3447,7 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'JMac\\Testing\\Traits\\HttpTestAssertions' => __DIR__ . '/..' . '/jasonmccreary/laravel-test-assertions/src/Traits/HttpTestAssertions.php',
         'Laravel\\Breeze\\BreezeServiceProvider' => __DIR__ . '/..' . '/laravel/breeze/src/BreezeServiceProvider.php',
         'Laravel\\Breeze\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallCommand.php',
         'Laravel\\Breeze\\Console\\InstallsApiStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsApiStack.php',
@@ -5938,6 +6014,7 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Shift\\Faker\\Registry' => __DIR__ . '/..' . '/laravel-shift/faker-registry/src/Registry.php',
         'Spatie\\Backtrace\\Arguments\\ArgumentReducers' => __DIR__ . '/..' . '/spatie/backtrace/src/Arguments/ArgumentReducers.php',
         'Spatie\\Backtrace\\Arguments\\ProvidedArgument' => __DIR__ . '/..' . '/spatie/backtrace/src/Arguments/ProvidedArgument.php',
         'Spatie\\Backtrace\\Arguments\\ReduceArgumentPayloadAction' => __DIR__ . '/..' . '/spatie/backtrace/src/Arguments/ReduceArgumentPayloadAction.php',
