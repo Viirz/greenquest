@@ -61,9 +61,9 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                < class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about" class="page-scroll">About</a></li>
-                    <li><a href="#services" class="page-scroll">Services</a></li>
+                    <li><a href="#services" class="page-scroll">Partner</a></li>
                     <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
                     <li>
                         <a href="#testimonials" class="page-scroll">Testimonials</a>
@@ -99,7 +99,7 @@
                         @endauth
 
                     @endif
-                    </ul>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -112,7 +112,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 intro-text">
-                            <h1>Landscaping Services</h1>
+                            <h1>GreenQuest</h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
                                 Duis sed dapibus leo nec ornare diam.
@@ -130,7 +130,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <div class="about-text">
-                        <h2>Welcome to <span>Landscaper</span></h2>
+                        <h2>Welcome to <span>GreenQuest</span></h2>
                         <hr />
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -144,13 +144,13 @@
                             bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
                             commodo nibh.
                         </p>
-                        <a href="#services" class="btn btn-custom btn-lg page-scroll">View All Services</a>
+                        <!-- <a href="#services" class="btn btn-custom btn-lg page-scroll">View All Services</a> -->
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3">
-                    <div class="about-media"><img src="assets/welcome/img/about-1.jpg" alt=" " /></div>
+                    <!-- <div class="about-media"><img src="assets/welcome/img/about-1.jpg" alt=" " /></div> -->
                     <div class="about-desc">
-                        <h3>Garden Care</h3>
+                        <h3>Visi</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                             sed dapibus leo nec ornare diam sedasd commodo nibh ante
@@ -159,9 +159,9 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3">
-                    <div class="about-media"><img src="assets/welcome/img/about-2.jpg" alt=" " /></div>
+                    <!-- <div class="about-media"><img src="assets/welcome/img/about-2.jpg" alt=" " /></div> -->
                     <div class="about-desc">
-                        <h3>Lawn Care</h3>
+                        <h3>Misi</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                             sed dapibus leo nec ornare diam sedasd commodo nibh ante.
@@ -175,7 +175,7 @@
     <div id="services">
         <div class="container">
             <div class="col-md-10 col-md-offset-1 section-title text-center">
-                <h2>Our Services</h2>
+                <h2>Our Partner</h2>
                 <hr />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
