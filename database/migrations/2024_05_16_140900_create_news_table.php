@@ -19,6 +19,7 @@ class CreateNewsTable extends Migration
             $table->float('treePlanted');
             $table->string('region');
             $table->text('content');
+            $table->string('image')->nullable(); // Add this line
             $table->timestamps();
         });
     }

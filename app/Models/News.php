@@ -21,5 +21,6 @@ class News extends Model
         'treePlanted',
         'region',
         'content',
+        'image', // Add this line
     ];
 }
