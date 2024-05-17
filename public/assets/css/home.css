@@ -1,0 +1,458 @@
+/*Created By Strahinja Babic*/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=latin-ext');
+/*font-family: 'PT Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext');
+/*font-family: 'Anton', sans-serif;*/
+/*https: //i.ibb.co/WP4S99X/background.png*/
+
+body {
+    background: url('https://i.ibb.co/bbNrGss/backgroundtwo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    background-color: #93bc54;
+    padding: 0.3em 2em;
+    border-radius: 15px 0 15px 0;
+    text-align: center;
+    color: rgb(0, 59, 25);
+    font-family: 'PT Sans',
+        sans-serif;
+    font-weight: 200;
+    font-size: 2em;
+    letter-spacing: 5px;
+    width: 7em;
+}
+
+h2 b {
+    font-weight: bold;
+}
+
+.header {
+    margin: 2em 40%;
+}
+
+#subheader {
+    font-family: 'PT Sans',
+        sans-serif;
+    color: rgb(0, 59, 25);
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#hundrdTrees {
+    margin: 1em 0;
+}
+
+.treesPlanted {
+    margin: 1.5em auto;
+    width: 25.4em;
+}
+
+.treeNumber {
+    font-size: 3em;
+    color: rgb(0, 59, 25);
+    font-weight: bolder;
+    font-family: 'Anton',
+        sans-serif;
+    margin: -3.5em 2em;
+}
+
+.treeSubhed {
+    font-size: 1.5em;
+    color: rgb(2, 119, 51);
+    font-family: 'PT Sans',
+        sans-serif;
+    margin: 7em 5.5em;
+    width: 100%;
+}
+
+.treeDonation {
+    margin: -3em auto;
+    width: 25em;
+    border-radius: 1em;
+    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.322);
+    height: 20em;
+    background: white;
+
+}
+
+.btns {
+    margin: 4em 3em;
+    width: 100%;
+}
+
+button {
+    text-align: center;
+    padding: 0.6em 2em;
+    background: rgb(224, 223, 223);
+    outline: none;
+    border-radius: 0.51em;
+    color: rgba(0, 0, 0, 0.726);
+    border: transparent;
+    font-family: 'PT Sans',
+        sans-serif;
+    font-size: 1em;
+    transition: ease-in-out 0.20s;
+}
+
+button:hover {
+    background: rgb(0, 59, 25);
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    font-family: 'PT Sans',
+        sans-serif;
+    height: 3.3em;
+    margin: -4.7em 6em;
+    float: right;
+    font-size: 1em;
+    border-radius: 0.3em;
+    outline: none;
+    border: 1px solid;
+    width: 12.3em;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    text-align: center;
+}
+
+input[type="submit"] {
+    margin: 0em 5.8em;
+    background: #447035;
+    color: white;
+    font-family: 'PT Sans',
+        sans-serif;
+    width: 6em;
+    font-weight: bold;
+
+}
+
+.donators {
+    width: 40em;
+    font-family: 'PT Sans',
+        sans-serif;
+    border-radius: 1em;
+    margin: 5em 15%;
+}
+
+.donators h3 {
+    background: rgba(0, 0, 0, 0.048);
+    font-size: 1.4em;
+    padding: 0.5em 0.5em;
+    margin: 0 0;
+}
+
+#name {
+    font-weight: bold;
+    cursor: pointer;
+    color: green;
+    font-size: 1.2em;
+}
+
+#treesNum {
+    font-family: 'Anton',
+        sans-serif;
+    font-weight: lighter;
+}
+
+.donators li {
+    list-style: none;
+}
+
+.donators .mostTrees {
+    float: left;
+    width: 20em;
+    background: white;
+    box-shadow: 10px 12px 22px 0 rgba(0, 0, 0, 0.274);
+}
+
+.donators .recent {
+    float: right;
+    width: 20em;
+    border-left: 0.5px solid rgba(0, 0, 0, 0.61);
+    box-shadow: 19px 17px 22px 0px rgba(0, 0, 0, 0.274);
+    margin: -38.43em 0;
+    background: white;
+}
+
+#name,
+#treesNum,
+#date {
+    padding-left: 0.6em;
+}
+
+.cause {
+    float: right;
+    width: 40em;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin: -38.3em 17em;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.281);
+    background: white;
+}
+
+.cause h1 {
+    font-family: 'Anton',
+        sans-serif;
+    font-size: 2.4em;
+    color: rgb(0, 0, 0);
+    padding-left: 0.3em;
+    background: #93bc54;
+}
+
+.cause p {
+    font-size: 1.3em;
+    font-family: 'PT Sans',
+        sans-serif;
+    padding-left: 0.7em;
+    padding-top: 1em;
+}
+
+footer {
+    background: rgb(31, 31, 31);
+    font-family: 'PT Sans',
+        sans-serif;
+    color: whitesmoke;
+    margin: 0em -0.5em;
+    width: 102%;
+    float: left;
+    height: 9em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+span {
+    padding-top: 2em;
+    background: transparent;
+    float: left;
+    color: white;
+}
+
+footer a {
+    color: #93bc54;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1620px) {
+    .donators {
+        margin: 5em 7%;
+    }
+
+    .cause {
+        margin: -38.4em 8em;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    .donators {
+        margin: 5em 4%;
+    }
+
+    .cause {
+        margin: -38.4em 3em;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .donators {
+        margin: 5em 0%;
+    }
+
+    .cause {
+        margin: -38.4em 0em;
+    }
+
+    .header {
+        margin: 2em 36%;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .header {
+        margin: 2em 36%;
+    }
+
+    .cause {
+        width: 33em;
+        margin: -42.6em 6em;
+        font-size: 0.9em;
+    }
+
+    .donators {
+        margin: 4em 8%;
+        width: 30em;
+    }
+
+    .donators .mostTrees {
+        float: left;
+        width: 15em;
+    }
+
+    .donators .recent {
+        float: right;
+        width: 15em;
+        margin: -38.43em 0;
+
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background: url(https://i.ibb.co/GsNjyrR/1024px-Bckgrnd.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 20px;
+    }
+
+    .header {
+        margin: 2em 32%;
+    }
+
+    .cause {
+        width: 33em;
+        margin: 2em 25%;
+        float: left;
+    }
+
+    .donators {
+        margin: 4.5em 25%;
+        width: 30em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        background: url(https://i.ibb.co/GsNjyrR/1024px-Bckgrnd.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 70px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        background-position-y: 230px;
+    }
+
+    ;
+
+    .header {
+        margin: 2em 22%;
+    }
+
+    .cause {
+        width: 33em;
+        margin: 2em 11%;
+        float: left;
+    }
+
+    .donators {
+        margin: 4.5em 11%;
+        width: 30em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        background: url(https://i.ibb.co/jwNCbsZ/phone-Background.png);
+        background-repeat: no-repeat;
+        background-position-y: 147px;
+    }
+
+    .header {
+        margin: 2em 4%;
+    }
+
+    .cause {
+        width: 26.5em;
+        margin: 2em 1.1%;
+        float: left;
+    }
+
+    .donators {
+        margin: 0em 1.1%;
+        width: 24em;
+    }
+
+    .treeNumber {
+        font-size: 2.5em;
+        margin: 1em 3em;
+    }
+
+    img[alt="frame"] {
+        display: none;
+    }
+
+    .treeSubhed {
+        font-size: 1.5em;
+        margin: -1.8em 5.5em;
+        width: 100%;
+    }
+
+    .treeDonation {
+        margin: 4em auto;
+        width: 20em;
+        height: 15em;
+
+    }
+
+    button {
+        padding: 0.3em 1em;
+        font-size: 1em;
+    }
+
+    .btns {
+        margin: 1em 1.5em;
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        margin: -4.2em 3em;
+        width: 6em;
+        font-weight: bold;
+
+    }
+
+    input {
+        height: 3.3em;
+        margin: 0.7em 10em;
+        font-size: 1em;
+        width: 10em;
+    }
+
+    .donators .mostTrees {
+        float: left;
+        width: 12em;
+    }
+
+    .donators .recent {
+        width: 12em;
+        margin: -38.43em 0;
+
+    }
+
+}
+
+@media screen and (max-width: 405px) {
+  
+   .header {
+        margin: 2em 3%;
+    }
+  
+  .cause {
+        width: 26em;
+        margin: 2em -0.3%;
+        float: left;
+    }
+
+    .donators {
+        margin: 0em -1%;
+        width: 24em;
+    }
+}
