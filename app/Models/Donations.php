@@ -9,6 +9,7 @@ class Donations extends Model
 {
     use CrudTrait;
     use HasFactory;
+    public $timestamps = false;
 
     public $timestamps = false;
     

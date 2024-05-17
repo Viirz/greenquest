@@ -62,20 +62,25 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about" class="page-scroll">About</a></li>
-                    <li><a href="#services" class="page-scroll">Services</a></li>
+                    <li><a href="#services" class="page-scroll">Partner</a></li>
                     <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
                     <li>
-                        <a href="#testimonials" class="page-scroll">Testimonials</a>
+                        <a href="#FAQs" class="page-scroll">FAQs</a>
                     </li>
                     <li><a href="#contact" class="page-scroll">Contact</a></li>
-                    <li>
+                    
 
                         @if (Route::has('login'))
 
                         @auth
-                        <a href="{{ url('/dashboard') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            Dashboard
-                        </a>
+
+                            <li>
+                                <a href="{{ url('/dashboard') }}"
+                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                    Dashboard
+                                </a>
+
+                            </li>
                         @else
                     <li>
                         <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
@@ -107,7 +112,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 intro-text">
-                            <h1>Landscaping Services</h1>
+                            <h1>GreenQuest</h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
                                 Duis sed dapibus leo nec ornare diam.
@@ -125,7 +130,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <div class="about-text">
-                        <h2>Welcome to <span>Landscaper</span></h2>
+                        <h2>Welcome to <span>GreenQuest</span></h2>
                         <hr />
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -139,13 +144,13 @@
                             bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
                             commodo nibh.
                         </p>
-                        <a href="#services" class="btn btn-custom btn-lg page-scroll">View All Services</a>
+                        <!-- <a href="#services" class="btn btn-custom btn-lg page-scroll">View All Services</a> -->
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3">
-                    <div class="about-media"><img src="assets/welcome/img/about-1.jpg" alt=" " /></div>
+                    <!-- <div class="about-media"><img src="assets/welcome/img/about-1.jpg" alt=" " /></div> -->
                     <div class="about-desc">
-                        <h3>Garden Care</h3>
+                        <h3>Visi</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                             sed dapibus leo nec ornare diam sedasd commodo nibh ante
@@ -154,9 +159,9 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3">
-                    <div class="about-media"><img src="assets/welcome/img/about-2.jpg" alt=" " /></div>
+                    <!-- <div class="about-media"><img src="assets/welcome/img/about-2.jpg" alt=" " /></div> -->
                     <div class="about-desc">
-                        <h3>Lawn Care</h3>
+                        <h3>Misi</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                             sed dapibus leo nec ornare diam sedasd commodo nibh ante.
@@ -170,7 +175,7 @@
     <div id="services">
         <div class="container">
             <div class="col-md-10 col-md-offset-1 section-title text-center">
-                <h2>Our Services</h2>
+                <h2>Our Partner</h2>
                 <hr />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
@@ -371,52 +376,44 @@
             </div>
         </div>
     </div>
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="text-center">
+    <!-- FAQs Section -->
+    <div id="faqs" class="text-center">
         <div class="overlay">
             <div class="container">
                 <div class="section-title">
-                    <h2>Testimonials</h2>
+                    <h2>FAQs</h2>
                     <hr />
                 </div>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div id="testimonial" class="owl-carousel owl-theme">
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- John DOE, Parker County, TX</p>
+                                <div class="faq-question">What is GreenQuest's mission?</div>
+                                <div class="faq-answer">GreenQuest's mission is to promote environmental sustainability
+                                    through tree planting and conservation efforts.
+                                </div>
                             </div>
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- Jenny DOE, Parker County, TX</p>
+                                <div class="faq-question">How can I get involved with GreenQuest?</div>
+                                <div class="faq-answer">You can get involved with GreenQuest by volunteering for tree
+                                    planting events,
+                                    donating to support our projects, or spreading awareness about our mission.
+                                </div>
                             </div>
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- John DOE, Parker County, TX</p>
+                                <div class="faq-question">How does GreenQuest ensure the sustainability of its projects?
+                                </div>
+                                <div class="faq-answer">GreenQuest works closely with local communities and
+                                    environmental experts to
+                                    ensure that tree planting projects are sustainable and have a positive long-term
+                                    impact.
+                                </div>
                             </div>
                             <div class="item">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                                    facilisis bibendum dolor feugiat at duis sed dapibus leo nec
-                                    ornare diam."
-                                </p>
-                                <p>- John DOE, Parker County, TX</p>
+                                <div class="faq-question">Is my donation tax-deductible?</div>
+                                <div class="faq-answer">Yes, donations made to GreenQuest are tax deductible to the
+                                    extent allowed by
+                                    law. Please consult with your tax advisor for more information.</div>
                             </div>
                         </div>
                     </div>

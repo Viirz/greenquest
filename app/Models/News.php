@@ -10,4 +10,17 @@ class News extends Model
 {
     use CrudTrait;
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title',
+        'treePlanted',
+        'region',
+        'content',
+        'image', // Add this line
+    ];
 }
