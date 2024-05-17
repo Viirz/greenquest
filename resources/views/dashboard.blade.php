@@ -21,6 +21,7 @@
         <link href="assets/dashboard/css/main.min.css" rel="stylesheet" />
         <link href="assets/dashboard/css/odometer.css" rel="stylesheet" />
         <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+        <script src="https://github.hubspot.com/odometer/odometer.js"></script>
         <title>#teamtrees</title>
 
         <style>
@@ -30,6 +31,23 @@
 
             #link {
                 color: inherit !important;
+            }
+
+            .map-container {
+                position: relative;
+                text-align: center;
+                background-color: #273654;
+            }
+
+            .label {
+                position: absolute;
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
+            }
+            
+            .news{
+                background-color: #CDE4E4;
             }
 
             .map-container {
@@ -202,6 +220,7 @@
                             <h1 class="text-uppercase d-none">#teamtrees</h1>
                             <h1 class="text-center">
                                 <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees" src="assets/dashboard/images/GQ.png" />
+                                <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees" src="assets/dashboard/images/GQ.png" />
                             </h1>
                             <p class="lead mb-2">
                                 Help us plant 20 million trees around the globe by January 1st,
@@ -209,9 +228,10 @@
                             </p>
 
                             <div class="counter-wrap">
-                                <div id="totalTrees" class="counter odometer"></div>
+                                <div id="totalTrees" class="counter odometer"> 0</div>
                                 <div class="measure-wrap">
                                     <span class="text-uppercase letter-spacing" style="top: 4px">Total Donation</span>
+                                    <img class="counter-underline" src="assets/dashboard/images/counter-underline-blue.svg" />
                                     <img class="counter-underline" src="assets/dashboard/images/counter-underline-blue.svg" />
                                     <br />
                                 </div>
@@ -284,6 +304,8 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 setInterval(function() {
+            $(document).ready(function() {
+                setInterval(function() {
                     $.ajax({
                         url: '/donations/sum', // replace with your endpoint
                         type: 'GET',
@@ -291,11 +313,17 @@
                             // Assuming the server returns the new total trees count
                             var totalTrees = $('#totalTrees');
                             totalTrees.html(data.sum); // Odometer uses innerHTML instead of text()
+                        success: function(data) {
+                            // Assuming the server returns the new total trees count
+                            var totalTrees = $('#totalTrees');
+                            totalTrees.html(data.sum); // Odometer uses innerHTML instead of text()
                         },
+                        error: function(error) {
                         error: function(error) {
                             console.log(error);
                         }
                     });
+                }, 1000); // 1000 milliseconds = 1 second
                 }, 1000); // 1000 milliseconds = 1 second
             });
         </script>
