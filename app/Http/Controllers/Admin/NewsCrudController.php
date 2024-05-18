@@ -56,8 +56,12 @@ class NewsCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(NewsRequest::class);
-        CRUD::setFromDb(); // set fields from db columns.
-
+        // CRUD::setFromDb(); // set fields from db columns.
+        CRUD::field('title')->type('text');
+        CRUD::field('treePlanted')->type('number');
+        CRUD::field('region')->type('text');
+        CRUD::field('content')->type('textarea');
+        CRUD::field('image')->type('upload')->withFiles();
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');

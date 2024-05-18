@@ -11,7 +11,6 @@ class Donations extends Model
     use HasFactory;
     public $timestamps = false;
 
-    public $timestamps = false;
     
     protected $table = 'donations'; // specify the table name if it's not the plural form of the model name
 
