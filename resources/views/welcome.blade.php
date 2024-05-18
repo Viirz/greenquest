@@ -63,7 +63,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about" class="page-scroll">About</a></li>
-                    <li><a href="#services" class="page-scroll">Partner</a></li>
+                    <li><a href="#services" class="page-scroll">Our Team</a></li>
                     <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
                     <li><a href="#faqs" class="page-scroll">FAQs</a></li>
                     <li><a href="#contact" class="page-scroll">Contact</a></li>
@@ -172,11 +172,11 @@
             </div>
         </div>
     </div>
-    <!-- Services Section -->
+    <!-- Team Section -->
     <div id="services">
         <div class="container">
             <div class="col-md-10 col-md-offset-1 section-title text-center">
-                <h2>Our Partner</h2>
+                <h2>Our Team</h2>
                 <hr />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
@@ -189,11 +189,9 @@
                         <img src="assets/welcome/img/services/service-1.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
-                        <h3>Lawn Care</h3>
+                        <h3>Lyonard Gemilang</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam sedasd commodo nibh ante
-                            facilisis bibendum dolor feugiat at.
+                            "Stop black people from planting trees"
                         </p>
                     </div>
                 </div>
@@ -202,11 +200,9 @@
                         <img src="assets/welcome/img/services/service-2.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
-                        <h3>Landscape Design</h3>
+                        <h3>Virgananta Saputra</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam sedasd commodo nibh ante
-                            facilisis bibendum dolor feugiat at.
+                            "Gas terus sampe pingsan"
                         </p>
                     </div>
                 </div>
@@ -215,11 +211,9 @@
                         <img src="assets/welcome/img/services/service-3.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
-                        <h3>Tree Care</h3>
+                        <h3>Ahmad Jawahirul</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam sedasd commodo nibh ante
-                            facilisis bibendum dolor feugiat at.
+                            "Kurang ngaji"
                         </p>
                     </div>
                 </div>
@@ -228,11 +222,9 @@
                         <img src="assets/welcome/img/services/service-4.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
-                        <h3>Spring & Fall Cleanup</h3>
+                        <h3>Arthurito Keintjem</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam sedasd commodo nibh ante
-                            facilisis bibendum dolor feugiat at.
+                            "Rakha bisnis"
                         </p>
                     </div>
                 </div>
