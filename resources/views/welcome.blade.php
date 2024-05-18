@@ -46,7 +46,8 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -64,13 +65,11 @@
                     <li><a href="#about" class="page-scroll">About</a></li>
                     <li><a href="#services" class="page-scroll">Partner</a></li>
                     <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-                    <li>
-                        <a href="#FAQs" class="page-scroll">FAQs</a>
-                    </li>
+                    <li><a href="#faqs" class="page-scroll">FAQs</a></li>
                     <li><a href="#contact" class="page-scroll">Contact</a></li>
-                    
 
-                        @if (Route::has('login'))
+
+                    @if (Route::has('login'))
 
                         @auth
 
@@ -82,20 +81,22 @@
 
                             </li>
                         @else
-                    <li>
-                        <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            Log in
-                        </a>
-                    </li>
-                    @if (Route::has('register'))
-                    <li>
-                        <a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            Register
-                        </a>
-                    </li>
+                            <li>
+                                <a href="{{ route('login') }}"
+                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                    Log in
+                                </a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li>
+                                    <a href="{{ route('register') }}"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                        Register
+                                    </a>
+                                </li>
 
-                    @endif
-                    @endauth
+                            @endif
+                        @endauth
 
                     @endif
                     </li>
@@ -249,29 +250,19 @@
                     dapibus leonec.
                 </p>
             </div>
-            <div class="categories">
-                <ul class="cat">
-                    <li>
-                        <ol class="type">
-                            <li><a href="#" data-filter="*" class="active">All</a></li>
-                            <li><a href="#" data-filter=".lawn">Lawn Care</a></li>
-                            <li><a href="#" data-filter=".garden">Garden Care</a></li>
-                            <li><a href="#" data-filter=".planting">Planting</a></li>
-                        </ol>
-                    </li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
+            
             <div class="row">
                 <div class="portfolio-items">
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/01-large.jpg" title="Project Title"
+                                    data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Lorem Ipsum</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/01-small.jpg" class="img-responsive"
+                                        alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -279,11 +270,13 @@
                     <div class="col-sm-6 col-md-4 planting">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/02-large.jpg" title="Project Title"
+                                    data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Adipiscing Elit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/02-small.jpg" class="img-responsive"
+                                        alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -291,11 +284,13 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/03-large.jpg" title="Project Title"
+                                    data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Lorem Ipsum</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/03-small.jpg" class="img-responsive"
+                                        alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -303,11 +298,13 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/04-large.jpg" title="Project Title"
+                                    data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Lorem Ipsum</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/04-small.jpg" class="img-responsive"
+                                        alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -315,11 +312,13 @@
                     <div class="col-sm-6 col-md-4 planting">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/05-large.jpg" title="Project Title"
+                                    data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Adipiscing Elit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/05-small.jpg" class="img-responsive"
+                                        alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -327,47 +326,13 @@
                     <div class="col-sm-6 col-md-4 garden">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <a href="assets/welcome/img/portfolio/06-large.jpg" title="Project Title"
+                                    data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dolor Sit</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 garden">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                    <div class="hover-text">
-                                        <h4>Dolor Sit</h4>
-                                    </div>
-                                    <img src="assets/welcome/img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 lawn">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                    <div class="hover-text">
-                                        <h4>Lorem Ipsum</h4>
-                                    </div>
-                                    <img src="assets/welcome/img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 planting">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                    <div class="hover-text">
-                                        <h4>Adipiscing Elit</h4>
-                                    </div>
-                                    <img src="assets/welcome/img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title" />
+                                    <img src="assets/welcome/img/portfolio/06-small.jpg" class="img-responsive"
+                                        alt="Project Title" />
                                 </a>
                             </div>
                         </div>
@@ -460,23 +425,27 @@
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <h3>Leave us a message</h3>
-                <form name="sentMessage" id="contactForm" novalidate>
+                <form name="sentMessage" id="contactForm" novalidate action="{{ route('message.send') }}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Name" required="required" />
+                                <input type="text" id="name" class="form-control" placeholder="Name"
+                                    required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Email" required="required" />
+                                <input type="email" id="email" class="form-control" placeholder="Email"
+                                    required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message"
+                            required></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                     <div id="success"></div>
@@ -504,22 +473,16 @@
                         </li>
                     </ul>
                 </div>
-                <p>
-                    Distributed By
-                    <a target="_blank" href="https://htmltemplates.co/">HTML Templates</a>
-                </p>
             </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="assets/welcome/js/jquery.1.11.1.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/bootstrap.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/SmoothScroll.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/nivo-lightbox.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/jquery.isotope.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/owl.carousel.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/jqBootstrapValidation.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/contact_me.js"></script>
-    <script type="text/javascript" src="assets/welcome/js/main.js"></script>
+            <script type="text/javascript" src="assets/welcome/js/jquery.1.11.1.js"></script>
+            <script type="text/javascript" src="assets/welcome/js/bootstrap.js"></script>
+            <script type="text/javascript" src="assets/welcome/js/SmoothScroll.js"></script>
+            <script type="text/javascript" src="assets/welcome/js/nivo-lightbox.js"></script>
+            <script type="text/javascript" src="assets/welcome/js/jquery.isotope.js"></script>
+            <script type="text/javascript" src="assets/welcome/js/owl.carousel.js"></script>
+            <script type="text/javascript" src="assets/welcome/js/jqBootstrapValidation.js"></script>
+            <!-- <script type="text/javascript" src="assets/welcome/js/contact_me.js"></script> -->
+            <script type="text/javascript" src="assets/welcome/js/main.js"></script>
 </body>
 
 </html>

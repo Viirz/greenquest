@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\DonationController;
+use App\Http\Controllers\NewsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,14 +18,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/message', [MessageController::class, 'send'])->name('message.send');
 });
-
-use App\Http\Controllers\DonationController;
 
 Route::get('/donations/sum', [DonationController::class, 'sum']);
 
-use App\Http\Controllers\NewsController;
-
 Route::get('/news', [NewsController::class, 'index']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
