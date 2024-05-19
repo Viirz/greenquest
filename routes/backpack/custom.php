@@ -19,4 +19,5 @@ Route::group([
     Route::crud('donations', 'DonationsCrudController');
     Route::crud('user', 'UserCrudController');
     Route::crud('news', 'NewsCrudController');
+    Route::crud('message', 'MessageCrudController');
 }); // this should be the absolute last line of this file
