@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+
+Route::get('/news/{region}', [NewsController::class, 'getNewsByRegion']);
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,9 +22,12 @@ Route::middleware('auth')->group(function () {
 
 use App\Http\Controllers\DonationController;
 
-Route::get('/donations/sum', [DonationController::class, 'sum']);
+// Route::get('/donations/sum', [DonationController::class, 'sum']);
+Route::get('/donations/sum', [DonationController::class, 'totalDonations']);
 
-use App\Http\Controllers\NewsController;
+Route::post('/donate', [DonationController::class, 'store'])->name('donate');
+
+
 
 Route::get('/news', [NewsController::class, 'index']);
 

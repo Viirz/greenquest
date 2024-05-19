@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\News;
@@ -30,8 +29,11 @@ class NewsController extends Controller
 
         return redirect()->route('news.index')->with('success', 'News created successfully.');
     }
-    // public function index()
-    // {
-    //     return News::all();
-    // }
+
+    // Tambahkan metode ini
+    public function getNewsByRegion($region)
+    {
+        $news = News::where('region', $region)->get();
+        return response()->json($news);
+    }
 }

@@ -36,7 +36,7 @@
                 position: relative;
                 text-align: center;
                 background-color: #273654;
-                z-index: 0;
+                width: 100%;
             }
 
             .label {
@@ -66,7 +66,7 @@
             .form-background {
                 gap: 20px;
                 height: 100vh;
-                background-color: #273654;
+                background-color: #2654;
                 justify-content: center;
                 display: flex;
                 align-items: center;
@@ -122,7 +122,7 @@
                 font-family: 'PT Sans', sans-serif;
                 font-size: 1em;
                 color: white;
-        
+
                 /* Menyesuaikan ukuran font agar proporsional dengan tombol yang lebih besar */
                 transition: ease-in-out 0.20s;
 
@@ -132,6 +132,35 @@
                 background: rgb(0, 59, 25);
                 color: white;
                 cursor: pointer;
+            }
+
+            .map-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .label {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 255);
+                padding: 5px 10px;
+                border-radius: 15px;
+                /* Membuat bentuk lonjong */
+                font-weight: bold;
+                text-align: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                /* Menambahkan sedikit bayangan untuk efek 3D */
+                width: 140px;
+                /* Mengatur lebar tetap pada label */
+                height: 30px;
+                /* Mengatur tinggi tetap pada label */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                /* Menyembunyikan teks yang melampaui batas */
+                white-space: nowrap;
+                /* Mencegah teks melompat ke baris baru */
             }
 
 
@@ -147,7 +176,7 @@
                 outline: none;
                 border: 1px solid rgba(0, 0, 0, 0.397);
                 text-align: center;
-                width:320px;
+                width: 320px;
                 /* Menyesuaikan lebar input agar sesuai dengan form yang lebih besar */
             }
 
@@ -159,10 +188,69 @@
                 /* Menyesuaikan padding agar tombol lebih besar */
                 font-weight: bold;
                 margin-top: 1em;
-                width:320px;
+                width: 320px;
 
                 /* Menyesuaikan margin agar lebih proporsional */
             }
+
+
+            .news-content {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .news-item {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.1);
+                flex: 1 1 calc(50% - 20px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .news-item h3 {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+
+            .news-item img {
+                max-width: 100%;
+                border-radius: 10px;
+            }
+
+            .news-item .trees-planted {
+                background-color: #89B636;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                display: inline-block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .news-item .region {
+                font-size: 0.9em;
+                color: #555;
+            }
+
+            .news-item .content {
+                flex-grow: 1;
+            }
+
+            .news-item .date {
+                font-size: 0.8em;
+                color: #999;
+                margin-top: 10px;
+            }
+
+            .container {
+                margin-top: 30px;
+            }
+
+
 
             .counter-wrap {
                 margin-bottom: 1em;
@@ -177,6 +265,8 @@
             }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Animasi Map -->
         <script>
             $(document).ready(function() {
                 $("#mapButton").click(function() {
@@ -186,6 +276,126 @@
                 });
             });
         </script>
+
+        <!-- Menampilkan News berdasarkan Map -->
+        <script>
+            $(document).ready(function() {
+                function loadNews(region) {
+                    $.ajax({
+                        url: '/news/' + region,
+                        type: 'GET',
+                        success: function(data) {
+                            let newsContainer = $('#' + region + '-news');
+                            newsContainer.empty();
+
+                            data.forEach(news => {
+                                let newsHtml = `
+                        <div class="news-item">
+                            <h3>${news.title}</h3>
+                            <div class="trees-planted">${news.treePlanted.toLocaleString()} TREES</div>
+                            <div class="content">${news.content}</div>
+                            ${news.image ? `<img src="/storage/${news.image}" alt="${news.title}">` : ''}
+                            <div class="region">Region: ${news.region}</div>
+                            <div class="date">Date: ${new Date(news.created_at).toLocaleDateString()}</div>
+                        </div>
+                    `;
+                                newsContainer.append(newsHtml);
+                            });
+                        },
+                        error: function(error) {
+                            console.log(error);
+                        }
+                    });
+                }
+
+                // Load news for each region
+                ['sumatera', 'kalimantan', 'sulawesi', 'papua', 'jawa'].forEach(region => {
+                    loadNews(region);
+                });
+            });
+        </script>
+
+
+        <!-- Resize Map -->
+        <script>
+            $(document).ready(function() {
+                function updateLabels() {
+                    $('.label').each(function() {
+                        const top = $(this).data('top');
+                        const left = $(this).data('left');
+                        $(this).css({
+                            top: top + '%',
+                            left: left + '%'
+                        });
+                    });
+                }
+
+                $(window).on('resize', function() {
+                    updateLabels();
+                });
+
+                updateLabels();
+            });
+        </script>
+
+
+        <!-- Resize Map -->
+        <script>
+            $(document).ready(function() {
+                function updateLabels() {
+                    $('.label').each(function() {
+                        const top = $(this).data('top');
+                        const left = $(this).data('left');
+                        $(this).css({
+                            top: top + '%',
+                            left: left + '%'
+                        });
+                    });
+                }
+
+                $(window).on('resize load', function() {
+                    updateLabels();
+                });
+
+                updateLabels();
+            });
+        </script>
+
+        <!-- Data donation -->
+        <script>
+            $(document).ready(function() {
+                $(".donate-button").click(function() {
+                    var amount = $(this).data('amount');
+                    $("#donationAmount").val(amount);
+                });
+            });
+        </script>
+
+        <!-- Donate Other Amount -->
+        <script>
+            $(document).ready(function() {
+                $(".donate-button").click(function() {
+                    var amount = $(this).data('amount');
+                    $("#donationAmount").val(amount);
+                    $("#customAmount").val(''); // Clear the custom amount input
+                });
+
+                $("#customAmount").on('input', function() {
+                    var customAmount = $(this).val();
+                    $("#donationAmount").val(customAmount);
+                });
+
+                $("#donationForm").submit(function(e) {
+                    var amount = $("#donationAmount").val();
+                    if (!amount || amount <= 0) {
+                        e.preventDefault();
+                        alert("Please enter a valid donation amount.");
+                    }
+                });
+            });
+        </script>
+
+
 
     </head>
 
@@ -221,11 +431,10 @@
                 </div>
             </div>
         </div>
-        <div class="form-background">
-            
-            
-            <div class="treeDonation">
+        <!-- <div class="form-background">
 
+
+            <div class="treeDonation">
                 <p style="padding: 0.5em 0; font-family: 'PT Sans', sans-serif; font-weight: bold; font-size: 24px;">
                     Choose your option
                 </p>
@@ -238,49 +447,76 @@
                     <input type="text" placeholder="Other amount">
                     <input type="submit">
                 </div>
-                
+
             </div>
             <div>
-                    <button class="mapButton" id="mapButton">Go to Map</button>
-                </div>
+                <button class="mapButton" id="mapButton">Go to Map</button>
+            </div>
+        </div> -->
+
+        <div class="form-background">
+            <div class="treeDonation">
+                <p style="padding: 0.5em 0; font-family: 'PT Sans', sans-serif; font-weight: bold; font-size: 24px;">
+                    Choose your option
+                </p>
+                <form id="donationForm" method="POST" action="{{ route('donate') }}">
+                    @csrf
+                    <div class="btns">
+                        <button type="button" class="donate-button" data-amount="1">1 <br>Trees</button>
+                        <button type="button" class="donate-button" data-amount="5">5 <br>Trees</button>
+                        <button type="button" class="donate-button" data-amount="20">20 <br>Trees</button>
+                        <button type="button" class="donate-button" data-amount="50">50 <br>Trees</button>
+                        <input type="text" id="customAmount" name="customAmount" placeholder="Other amount">
+                        <input type="hidden" id="donationAmount" name="amount" value="">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div>
+                <button class="mapButton" id="mapButton">Go to Map</button>
+            </div>
         </div>
+
+
 
 
         <div id="map-container" class="map-container">
-            <img src="assets/dashboard/images/petafix.png" alt="Peta Indonesia" style="width: 100%;">
-            <a href="#sumatera-container" class="label" style="top: 39.5%; left: 25.7%;">Sumatera</a>
-            <a href="#kalimantan-container" class="label" style="top: 36.8%; left: 43.2%;">Kalimantan</a>
-            <a href="#sulawesi-container" class="label" style="top: 47.2%; left: 53.6%;">Sulawesi</a>
-            <a href="#papua-container" class="label" style="top: 49.5%; left: 72.6%;">Papua</a>
-            <a href="#jawa-container" class="label" style="top: 61.3%; left: 37.6%;">Jawa</a>
+            <img src="assets/dashboard/images/peta-indo.png" alt="Peta Indonesia" class="map-image">
+            <a href="#sumatera-container" class="label" data-top="43.5" data-left="27.7">Sumatera</a>
+            <a href="#kalimantan-container" class="label" data-top="40.8" data-left="43.2">Kalimantan</a>
+            <a href="#sulawesi-container" class="label" data-top="47.2" data-left="53.6">Sulawesi</a>
+            <a href="#papua-container" class="label" data-top="49.5" data-left="72.6">Papua</a>
+            <a href="#jawa-container" class="label" data-top="61.3" data-left="40">Jawa</a>
         </div>
+
+
+
         <div id="news" class="news">
             <div id="sumatera-container" class="container">
                 <h2>Sumatera</h2>
-                <p>Informasi tentang Sumatera...</p>
+                <div class="news-content" id="sumatera-news"></div>
             </div>
-
             <div id="kalimantan-container" class="container">
                 <h2>Kalimantan</h2>
-                <p>Informasi tentang Kalimantan...</p>
+                <div class="news-content" id="kalimantan-news"></div>
             </div>
-
             <div id="sulawesi-container" class="container">
                 <h2>Sulawesi</h2>
-                <p>Informasi tentang Sulawesi...</p>
+                <div class="news-content" id="sulawesi-news"></div>
             </div>
-
             <div id="papua-container" class="container">
                 <h2>Papua</h2>
-                <p>Informasi tentang Papua...</p>
+                <div class="news-content" id="papua-news"></div>
             </div>
-
             <div id="jawa-container" class="container">
                 <h2>Jawa</h2>
-                <p>Informasi tentang Jawa...</p>
+                <div class="news-content" id="jawa-news"></div>
             </div>
         </div>
 
+
+
+        <!-- Total Amount Odomater -->
         <script type="text/javascript">
             $(document).ready(function() {
                 setInterval(function() {
