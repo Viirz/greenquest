@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Donations extends Model
 {
     use HasFactory;
-
+    use CrudTrait;
+    
     public $timestamps = false;
     
     protected $fillable = [

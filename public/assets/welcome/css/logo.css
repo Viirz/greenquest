@@ -1,0 +1,8 @@
+.logo {
+    display: block;
+    width: 50px;  /* Atur sesuai ukuran yang Anda inginkan */
+    height: auto;  /* Menjaga aspek rasio logo */
+    position: absolute;
+    top: 10px;  /* Atur sesuai kebutuhan */
+    left: 10px;  /* Atur sesuai kebutuhan */
+}

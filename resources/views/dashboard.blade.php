@@ -1,6 +1,4 @@
 <x-app-layout>
-    <!DOCTYPE html>
-    <html lang="en">
 
     <head>
         <meta charset="utf-8" />
@@ -21,7 +19,7 @@
         <link href="assets/dashboard/css/main.min.css" rel="stylesheet" />
         <link href="assets/dashboard/css/odometer.css" rel="stylesheet" />
         <script src="https://github.hubspot.com/odometer/odometer.js"></script>
-        <title>#teamtrees</title>
+        <title>GreenQuest</title>
 
         <style>
             .hero-background {
@@ -399,7 +397,7 @@
 
     </head>
 
-    <body>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="padding-top: 68px">
         <div class="hero-background mb-0">
             <img class="cloud" id="cloud-1" src="assets/dashboard/images/cloud.svg" />
             <img class="cloud" id="cloud-2" src="assets/dashboard/images/cloud-translucent.svg" />
@@ -414,8 +412,8 @@
                                 <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees" src="assets/dashboard/images/GQ.png" />
                             </h1>
                             <p class="lead mb-2">
-                                Help us plant 20 million trees around the globe by January 1st,
-                                2020.
+                                Bantu kami raih 150 ribu pohon untuk
+                                pulau pulau di Indonesia
                             </p>
 
                             <div class="counter-wrap">
@@ -536,6 +534,4 @@
             });
         </script>
     </body>
-
-    </html>
 </x-app-layout>
