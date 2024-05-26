@@ -1,7 +1,7 @@
 .news-image {
     width: 100%; /* Atur lebar gambar agar sesuai dengan kontainer */
     height: auto; /* Pertahankan rasio aspek */
-    max-width: 400px; /* Ukuran maksimum untuk lebar gambar */
-    max-height: 300px; /* Ukuran maksimum untuk tinggi gambar *//* Potong gambar jika ukurannya tidak sesuai */
+    max-width: 350px; /* Ukuran maksimum untuk lebar gambar */
+    max-height: 350px; /* Ukuran maksimum untuk tinggi gambar */
     border-radius: 10px; /* Tambahkan radius untuk sudut gambar jika diperlukan */
 }

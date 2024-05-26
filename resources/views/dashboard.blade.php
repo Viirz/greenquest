@@ -50,7 +50,7 @@
             }
 
             .news {
-                background-color: #CDE4E4;
+                background-color: #297045;
             }
 
             .treeDonation {
@@ -69,7 +69,7 @@
             .form-background {
                 gap: 20px;
                 height: 100vh;
-                background-color: #2654;
+                background-color: #204E4A;
                 justify-content: center;
                 display: flex;
                 align-items: center;
@@ -252,6 +252,7 @@
                 padding-top: 80px;
             }
             #sumatera-container h2, #kalimantan-container h2, #sulawesi-container h2, #papua-container h2, #jawa-container h2 {
+                color: white;
                 font-family: 'Satoshi', sans-serif;
             }
 
