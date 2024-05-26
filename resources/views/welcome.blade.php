@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Greenquest</title>
+    <title>GreenQuest</title>
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -115,8 +115,7 @@
                         <div class="col-md-8 col-md-offset-2 intro-text">
                             <h1>GreenQuest</h1>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                                Duis sed dapibus leo nec ornare diam.
+                                "Menanam Harapan, Membesarkan Masa Depan" 
                             </p>
                             <a href="#about" class="btn btn-custom btn-lg page-scroll">More Info</a>
                         </div>
@@ -134,16 +133,16 @@
                         <h2>Welcome to <span>GreenQuest</span></h2>
                         <hr />
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis
-                            bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
-                            commodo nibh.
+                            Greenquest adalah sebuah inisiatif digital yang berkomitmen untuk memulihkan 
+                            keanekaragaman hayati bumi kita. Kami berdedikasi untuk mendukung Sustainable Development Goals (SDGs), 
+                            terutama dalam mengambil tindakan segera melawan perubahan iklim dan mengelola hutan secara berkelanjutan.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis
-                            bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
-                            commodo nibh.
+                            Dengan platform yang mudah digunakan, kami mengajak individu dan organisasi untuk 
+                            berkontribusi pada penanaman pohon dan pemulihan ekosistem. Setiap donasi yang diberikan 
+                            akan langsung dialokasikan untuk penanaman pohon dan perawatan hutan.  Kami menjamin transparansi 
+                            penuh dan menyediakan laporan berkala kepada para donatur, memastikan setiap sumbangan Anda memberikan 
+                            dampak nyata.
                         </p>
                         <!-- <a href="#services" class="btn btn-custom btn-lg page-scroll">View All Services</a> -->
                     </div>
@@ -153,9 +152,8 @@
                     <div class="about-desc">
                         <h3>Visi</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam sedasd commodo nibh ante
-                            facilisis.
+                            Menjadi pelopor dalam upaya reforestasi global, menciptakan dunia di mana manusia 
+                            dan alam dapat hidup berdampingan dalam harmoni.
                         </p>
                     </div>
                 </div>
@@ -164,8 +162,9 @@
                     <div class="about-desc">
                         <h3>Misi</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            sed dapibus leo nec ornare diam sedasd commodo nibh ante.
+                            Menggalang dana dan sumber daya untuk mendukung penanaman pohon secara masif dan berkelanjutan, 
+                            membangun kesadaran dan pendidikan tentang pentingnya hutan untuk kesehatan planet kita, dan 
+                            mendorong partisipasi aktif masyarakat dalam upaya pelestarian lingkungan.
                         </p>
                     </div>
                 </div>
@@ -179,8 +178,7 @@
                 <h2>Our Team</h2>
                 <hr />
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-                    dapibus leonec.
+                    Anggota tim GreenQuest 
                 </p>
             </div>
             <div class="row">
@@ -238,8 +236,7 @@
                 <h2>Project Gallery</h2>
                 <hr />
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-                    dapibus leonec.
+                    Galeri GreenQuest 
                 </p>
             </div>
             
@@ -248,12 +245,12 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/01-large.jpg" title="Project Title"
+                                <a href="assets/welcome/img/portfolio/foto1-large.jpg" title="Project Title"
                                     data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
-                                        <h4>Lorem Ipsum</h4>
+                                        <h4>Foto 1</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/01-small.jpg" class="img-responsive"
+                                    <img src="assets/welcome/img/portfolio/foto1-small.jpg" class="img-responsive"
                                         alt="Project Title" />
                                 </a>
                             </div>
@@ -262,12 +259,12 @@
                     <div class="col-sm-6 col-md-4 planting">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/02-large.jpg" title="Project Title"
+                                <a href="assets/welcome/img/portfolio/foto2-large.jpg" title="Project Title"
                                     data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
-                                        <h4>Adipiscing Elit</h4>
+                                        <h4>Foto 2</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/02-small.jpg" class="img-responsive"
+                                    <img src="assets/welcome/img/portfolio/foto2-small.jpg" class="img-responsive"
                                         alt="Project Title" />
                                 </a>
                             </div>
@@ -276,12 +273,12 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/03-large.jpg" title="Project Title"
+                                <a href="assets/welcome/img/portfolio/foto3-large.jpg" title="Project Title"
                                     data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
-                                        <h4>Lorem Ipsum</h4>
+                                        <h4>Foto 3</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/03-small.jpg" class="img-responsive"
+                                    <img src="assets/welcome/img/portfolio/foto3-small.jpg" class="img-responsive"
                                         alt="Project Title" />
                                 </a>
                             </div>
@@ -290,12 +287,12 @@
                     <div class="col-sm-6 col-md-4 lawn">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/04-large.jpg" title="Project Title"
+                                <a href="assets/welcome/img/portfolio/foto5-large.jpg" title="Project Title"
                                     data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
-                                        <h4>Lorem Ipsum</h4>
+                                        <h4>Foto 4</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/04-small.jpg" class="img-responsive"
+                                    <img src="assets/welcome/img/portfolio/foto5-small.jpg" class="img-responsive"
                                         alt="Project Title" />
                                 </a>
                             </div>
@@ -304,12 +301,12 @@
                     <div class="col-sm-6 col-md-4 planting">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/05-large.jpg" title="Project Title"
+                                <a href="assets/welcome/img/portfolio/foto6-large.jpg" title="Project Title"
                                     data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
-                                        <h4>Adipiscing Elit</h4>
+                                        <h4>Foto 5</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/05-small.jpg" class="img-responsive"
+                                    <img src="assets/welcome/img/portfolio/foto6-small.jpg" class="img-responsive"
                                         alt="Project Title" />
                                 </a>
                             </div>
@@ -318,12 +315,12 @@
                     <div class="col-sm-6 col-md-4 garden">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="assets/welcome/img/portfolio/06-large.jpg" title="Project Title"
+                                <a href="assets/welcome/img/portfolio/foto7-large.jpg" title="Project Title"
                                     data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
-                                        <h4>Dolor Sit</h4>
+                                        <h4>Foto 6</h4>
                                     </div>
-                                    <img src="assets/welcome/img/portfolio/06-small.jpg" class="img-responsive"
+                                    <img src="assets/welcome/img/portfolio/foto7-small.jpg" class="img-responsive"
                                         alt="Project Title" />
                                 </a>
                             </div>
@@ -391,18 +388,18 @@
             </div>
             <div class="col-md-10 col-md-offset-1 contact-info">
                 <div class="col-md-4">
-                    <h3>Address</h3>
+                    <h3>Alamat</h3>
                     <hr />
                     <div class="contact-item">
-                        <p>4321 California St,</p>
-                        <p>San Francisco, CA 12345</p>
+                        <p>Jl. Veteran No.10-11, Ketawanggede,</p>
+                        <p>Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h3>Working Hours</h3>
+                    <h3>Jam Kerja</h3>
                     <hr />
                     <div class="contact-item">
-                        <p>Monday-Saturday: 07:00 - 18:00</p>
+                        <p>Senin-Sabtu: 07:00 - 18:00</p>
                         <p>Sunday: CLOSED</p>
                     </div>
                 </div>

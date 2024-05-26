@@ -17,9 +17,9 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->string('title');
             $table->float('treePlanted');
-            $table->string('region');
+            $table->enum('region', ['Jawa', 'Sumatera', 'Kalimantan', 'Sulawesi', 'Papua']);
             $table->text('content');
-            $table->string('image'); // Add this line
+            $table->string('image')->nullable(); // Add this line
             $table->timestamps();
         });
     }

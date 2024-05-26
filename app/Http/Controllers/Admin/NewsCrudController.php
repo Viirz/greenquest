@@ -59,7 +59,7 @@ class NewsCrudController extends CrudController
         // CRUD::setFromDb(); // set fields from db columns.
         CRUD::field('title')->type('text');
         CRUD::field('treePlanted')->type('number');
-        CRUD::field('region')->type('text');
+        CRUD::field('region')->type('enum')->option('Jawa', 'Sumatera', 'Kalimantan', 'Sulawesi', 'Papua');
         CRUD::field('content')->type('textarea');
         CRUD::field('image')->type('upload')->withFiles();
         /**
