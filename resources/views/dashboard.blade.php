@@ -21,6 +21,9 @@
         <link href="assets/dashboard/css/main.min.css" rel="stylesheet" />
         <link href="assets/dashboard/css/odometer.css" rel="stylesheet" />
         <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="assets/dashboard/css/style.css" />
+
         <title>GreenQuest</title>
 
         <style>
@@ -290,15 +293,15 @@
 
                             data.forEach(news => {
                                 let newsHtml = `
-                        <div class="news-item">
-                            <h3>${news.title}</h3>
-                            <div class="trees-planted">${news.treePlanted.toLocaleString()} TREES</div>
-                            <div class="content">${news.content}</div>
-                            ${news.image ? `<img src="/storage/${news.image}" alt="${news.title}">` : ''}
-                            <div class="region">Region: ${news.region}</div>
-                            <div class="date">Date: ${new Date(news.created_at).toLocaleDateString()}</div>
-                        </div>
-                    `;
+                                    <div class="news-item">
+                                        <h3>${news.title}</h3>
+                                        <div class="trees-planted">${news.treePlanted.toLocaleString()} TREES</div>
+                                        ${news.image ? `<img class="news-image" src="/storage/${news.image}" alt="${news.title}">` : ''}
+                                        <div class="content">${news.content}</div>
+                                        <!-- <div class="region">Region: ${news.region}</div> -->
+                                        <div class="date">Date: ${new Date(news.created_at).toLocaleDateString()}</div>
+                                    </div>
+                                `;
                                 newsContainer.append(newsHtml);
                             });
                         },
