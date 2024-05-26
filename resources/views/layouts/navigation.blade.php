@@ -12,16 +12,16 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-12 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="url('/')" :active="request()->is('/')" style="color: #ffffff; font-size: 1.075rem;" >
+                    <x-nav-link :href="url('/')" :active="request()->is('/')" style="color: #ffffff; font-size: 1.075rem;">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link :href="url('/donation')" :active="request()->is('donation')" style="color: #ffffff; font-size: 1.075rem;">
+                    <x-nav-link :href="route('dashboard')" onclick="scrollToTreeDonation(event)" :active="request()->is('donation')" style="color: #ffffff; font-size: 1.075rem;">
                         {{ __('Donation') }}
                     </x-nav-link>
-                    <x-nav-link :href="url('/map')" :active="request()->is('map')" style="color: #ffffff; font-size: 1.075rem;">
+                    <x-nav-link :href="route('dashboard')" onclick="scrollToMap(event)" :active="request()->is('map')" style="color: #ffffff; font-size: 1.075rem;">
                         {{ __('Map') }}
                     </x-nav-link>
-                    <x-nav-link id="news-link" :href="url('/news')" :active="request()->is('news')" style="color: #ffffff; font-size: 1.075rem;">
+                    <x-nav-link :href="route('dashboard')" onclick="scrollToNews(event)" :active="request()->is('news')" style="color: #ffffff; font-size: 1.075rem;">
                         {{ __('News') }}
                     </x-nav-link>
                 </div>
@@ -45,15 +45,18 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="url('/admin')">
-                            {{ __('Admin') }}
-                        </x-dropdown-link>
+                        @if(app('App\Http\Middleware\CheckIfAdmin')->checkIfUserIsAdmin(auth()->user()))
+                        <!-- Admin menu goes here -->
+                            <x-dropdown-link :href="url('/admin')">
+                                {{ __('Admin') }}
+                            </x-dropdown-link>
+                        @endif
+
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
@@ -98,8 +101,7 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
@@ -110,12 +112,54 @@
 </nav>
 
 <script>
-window.onscroll = function() {
-    var navbar = document.getElementById('navbar');
-    if (window.pageYOffset > 0) {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-    } else {
-        navbar.style.backgroundColor = 'rgba(88, 128, 77, 1)';
+    window.onscroll = function() {
+        var navbar = document.getElementById('navbar');
+        if (window.pageYOffset > 0) {
+            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        } else {
+            navbar.style.backgroundColor = 'rgba(88, 128, 77, 1)';
+        }
+    };
+</script>
+
+<script>
+    function scrollToTreeDonation(event) {
+        event.preventDefault();
+        setTimeout(function() {
+            const element = document.querySelector('.form-background');
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }, 500);
     }
-};
+</script>
+
+<script>
+    function scrollToMap(event) {
+        event.preventDefault();
+        setTimeout(function() {
+            const element = document.querySelector('.map-container');
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }, 500);
+    }
+</script>
+
+<script>
+    function scrollToNews(event) {
+        event.preventDefault();
+        setTimeout(function() {
+            const element = document.querySelector('.news');
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }, 500);
+    }
 </script>

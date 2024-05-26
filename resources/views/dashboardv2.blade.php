@@ -11,9 +11,7 @@
         <meta property="og:image" content="https://teamtrees.org/images/social-share-earth-astronaut-1-9x1.png" />
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <!-- Google Fonts CSS -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet" />
         <link rel="shortcut icon" href="favicon.ico" />
@@ -196,7 +194,8 @@
 
             .news-content {
                 display: flex;
-                flex-wrap: wrap;
+                flex-direction: column;
+                /* Mengubah dari flex-wrap ke kolom vertikal */
                 gap: 20px;
             }
 
@@ -205,7 +204,8 @@
                 padding: 20px;
                 border-radius: 10px;
                 box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.1);
-                flex: 1 1 calc(50% - 20px);
+                width: 100%;
+                /* Menggunakan lebar penuh */
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -251,6 +251,11 @@
             }
 
 
+            .container {
+                margin-top: 30px;
+            }
+
+
 
             .counter-wrap {
                 margin-bottom: 1em;
@@ -268,8 +273,8 @@
 
         <!-- Animasi Map -->
         <script>
-            $(document).ready(function () {
-                $("#mapButton").click(function () {
+            $(document).ready(function() {
+                $("#mapButton").click(function() {
                     $('html, body').animate({
                         scrollTop: $("#map-container").offset().top
                     }, 1000); // Waktu dalam milidetik untuk animasi gulir (misalnya 1000ms)
@@ -279,12 +284,12 @@
 
         <!-- Menampilkan News berdasarkan Map -->
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 function loadNews(region) {
                     $.ajax({
                         url: '/news/' + region,
                         type: 'GET',
-                        success: function (data) {
+                        success: function(data) {
                             let newsContainer = $('#' + region + '-news');
                             newsContainer.empty();
 
@@ -302,7 +307,7 @@
                                 newsContainer.append(newsHtml);
                             });
                         },
-                        error: function (error) {
+                        error: function(error) {
                             console.log(error);
                         }
                     });
@@ -318,9 +323,9 @@
 
         <!-- Resize Map -->
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 function updateLabels() {
-                    $('.label').each(function () {
+                    $('.label').each(function() {
                         const top = $(this).data('top');
                         const left = $(this).data('left');
                         $(this).css({
@@ -330,7 +335,7 @@
                     });
                 }
 
-                $(window).on('resize', function () {
+                $(window).on('resize', function() {
                     updateLabels();
                 });
 
@@ -341,9 +346,9 @@
 
         <!-- Resize Map -->
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 function updateLabels() {
-                    $('.label').each(function () {
+                    $('.label').each(function() {
                         const top = $(this).data('top');
                         const left = $(this).data('left');
                         $(this).css({
@@ -353,7 +358,7 @@
                     });
                 }
 
-                $(window).on('resize load', function () {
+                $(window).on('resize load', function() {
                     updateLabels();
                 });
 
@@ -363,8 +368,8 @@
 
         <!-- Data donation -->
         <script>
-            $(document).ready(function () {
-                $(".donate-button").click(function () {
+            $(document).ready(function() {
+                $(".donate-button").click(function() {
                     var amount = $(this).data('amount');
                     $("#donationAmount").val(amount);
                 });
@@ -373,19 +378,19 @@
 
         <!-- Donate Other Amount -->
         <script>
-            $(document).ready(function () {
-                $(".donate-button").click(function () {
+            $(document).ready(function() {
+                $(".donate-button").click(function() {
                     var amount = $(this).data('amount');
                     $("#donationAmount").val(amount);
                     $("#customAmount").val(''); // Clear the custom amount input
                 });
 
-                $("#customAmount").on('input', function () {
+                $("#customAmount").on('input', function() {
                     var customAmount = $(this).val();
                     $("#donationAmount").val(customAmount);
                 });
 
-                $("#donationForm").submit(function (e) {
+                $("#donationForm").submit(function(e) {
                     var amount = $("#donationAmount").val();
                     if (!amount || amount <= 0) {
                         e.preventDefault();
@@ -411,8 +416,7 @@
                         <div class="text-center intro-copy">
                             <h1 class="text-uppercase d-none">#teamtrees</h1>
                             <h1 class="text-center">
-                                <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees"
-                                    src="assets/dashboard/images/GQ.png" />
+                                <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees" src="assets/dashboard/images/GQ.png" />
                             </h1>
                             <p class="lead mb-2">
                                 Bantu kami raih 150 ribu pohon untuk
@@ -423,8 +427,7 @@
                                 <div id="totalTrees" class="counter odometer"></div>
                                 <div class="measure-wrap">
                                     <span class="text-uppercase letter-spacing" style="top: 4px">Total Donation</span>
-                                    <img class="counter-underline"
-                                        src="assets/dashboard/images/counter-underline-blue.svg" />
+                                    <img class="counter-underline" src="assets/dashboard/images/counter-underline-blue.svg" />
                                     <br />
                                 </div>
                             </div>
@@ -456,8 +459,8 @@
             </div>
         </div> -->
 
-        <div class="form-background" id="form-background">
-            <div class="treeDonation" id="treeDonation">
+        <div class="form-background">
+            <div class="treeDonation">
                 <p style="padding: 0.5em 0; font-family: 'PT Sans', sans-serif; font-weight: bold; font-size: 24px;">
                     Choose your option
                 </p>
@@ -519,19 +522,20 @@
 
 
 
+
         <!-- Total Amount Odomater -->
         <script type="text/javascript">
-            $(document).ready(function () {
-                setInterval(function () {
+            $(document).ready(function() {
+                setInterval(function() {
                     $.ajax({
                         url: '/donations/sum', // replace with your endpoint
                         type: 'GET',
-                        success: function (data) {
+                        success: function(data) {
                             // Assuming the server returns the new total trees count
                             var totalTrees = $('#totalTrees');
                             totalTrees.html(data.sum); // Odometer uses innerHTML instead of text()
                         },
-                        error: function (error) {
+                        error: function(error) {
                             console.log(error);
                         }
                     });
@@ -540,9 +544,9 @@
         </script>
 
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 // Add click event listener to the labels
-                $('#map-container .label').on('click', function (e) {
+                $('#map-container .label').on('click', function(e) {
                     e.preventDefault();
 
                     // Get the region from the text of the label
