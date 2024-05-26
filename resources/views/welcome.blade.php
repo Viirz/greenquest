@@ -189,7 +189,7 @@
                     <div class="service-desc">
                         <h3>Lyonard Gemilang</h3>
                         <p>
-                            "Stop black people from planting trees"
+                            "Hijaukan bumi, hijaukan hati"
                         </p>
                     </div>
                 </div>

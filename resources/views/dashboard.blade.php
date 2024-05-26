@@ -57,7 +57,7 @@
                 position: relative;
                 z-index: 1;
                 width: 400px;
-
+                font-family: 'Satoshi', sans-serif;
                 border-radius: 1em;
                 box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.322);
                 background-color: white;
@@ -84,7 +84,7 @@
                 justify-content: center;
                 gap: 0.3em;
                 margin: 1em;
-
+                font-family: 'Satoshi', sans-serif;
                 /* Mengatur margin agar lebih proporsional */
             }
 
@@ -98,7 +98,7 @@
                 border-radius: 0.51em;
                 color: white;
                 border: transparent;
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 font-size: 1em;
                 /* Menyesuaikan ukuran font agar proporsional dengan tombol yang lebih besar */
                 transition: ease-in-out 0.20s;
@@ -122,7 +122,7 @@
                 border-radius: 0.51em;
                 color: rgba(0, 0, 0, 0.726);
                 border: transparent;
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 font-size: 1em;
                 color: white;
 
@@ -169,7 +169,7 @@
 
 
             input[type="text"] {
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 height: 2em;
                 margin: 0.5em;
                 /* Menyesuaikan margin agar lebih proporsional */
@@ -186,7 +186,7 @@
             input[type="submit"] {
                 background: #CDE4E4;
                 color: darkgreen;
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 padding: 1em 2em;
                 /* Menyesuaikan padding agar tombol lebih besar */
                 font-weight: bold;
@@ -195,7 +195,6 @@
 
                 /* Menyesuaikan margin agar lebih proporsional */
             }
-
 
             .news-content {
                 display: flex;
@@ -249,11 +248,18 @@
                 margin-top: 10px;
             }
 
-            .container {
-                margin-top: 30px;
+            #sumatera-container, #kalimantan-container, #sulawesi-container, #papua-container, #jawa-container {
+                padding-top: 80px;
+            }
+            #sumatera-container h2, #kalimantan-container h2, #sulawesi-container h2, #papua-container h2, #jawa-container h2 {
+                font-family: 'Satoshi', sans-serif;
             }
 
-
+            .donate-button{
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+            }
 
             .counter-wrap {
                 margin-bottom: 1em;
@@ -318,30 +324,6 @@
             });
         </script>
 
-
-        <!-- Resize Map -->
-        <script>
-            $(document).ready(function () {
-                function updateLabels() {
-                    $('.label').each(function () {
-                        const top = $(this).data('top');
-                        const left = $(this).data('left');
-                        $(this).css({
-                            top: top + '%',
-                            left: left + '%'
-                        });
-                    });
-                }
-
-                $(window).on('resize', function () {
-                    updateLabels();
-                });
-
-                updateLabels();
-            });
-        </script>
-
-
         <!-- Resize Map -->
         <script>
             $(document).ready(function () {
@@ -361,16 +343,6 @@
                 });
 
                 updateLabels();
-            });
-        </script>
-
-        <!-- Data donation -->
-        <script>
-            $(document).ready(function () {
-                $(".donate-button").click(function () {
-                    var amount = $(this).data('amount');
-                    $("#donationAmount").val(amount);
-                });
             });
         </script>
 
@@ -461,16 +433,16 @@
 
         <div class="form-background" id="form-background">
             <div class="treeDonation" id="treeDonation">
-                <p style="padding: 0.5em 0; font-family: 'PT Sans', sans-serif; font-weight: bold; font-size: 24px;">
+                <p style="padding: 0.5em 0; font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 24px;">
                     Choose your option
                 </p>
-                <form id="donationForm" method="POST" action="{{ route('donate') }}">
+                <form id="donationForm" method="POST" action="{{ route('donate') }}" style="font-family: 'Satoshi', sans-serif;">
                     @csrf
                     <div class="btns">
-                        <button type="button" class="donate-button" data-amount="1">1 <br>Trees</button>
-                        <button type="button" class="donate-button" data-amount="5">5 <br>Trees</button>
-                        <button type="button" class="donate-button" data-amount="20">20 <br>Trees</button>
-                        <button type="button" class="donate-button" data-amount="50">50 <br>Trees</button>
+                        <button type="button" class="donate-button" data-amount="1">1 Trees</button>
+                        <button type="button" class="donate-button" data-amount="5">5 Trees</button>
+                        <button type="button" class="donate-button" data-amount="20">20 Trees</button>
+                        <button type="button" class="donate-button" data-amount="50">50 Trees</button>
                         <input type="text" id="customAmount" name="customAmount" placeholder="Other amount">
                         <input type="hidden" id="donationAmount" name="amount" value="">
                         <input type="submit" value="Submit">
