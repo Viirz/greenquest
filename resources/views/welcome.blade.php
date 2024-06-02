@@ -184,45 +184,45 @@
             <div class="row">
                 <div class="col-md-3 text-center">
                     <div class="service-media">
-                        <img src="assets/welcome/img/services/service-1.jpg" alt=" " />
+                        <img src="assets/welcome/img/services/lyo-1.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
                         <h3>Lyonard Gemilang</h3>
                         <p>
-                            "Stop black people from planting trees"
+                            225150200111025
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="service-media">
-                        <img src="assets/welcome/img/services/service-2.jpg" alt=" " />
+                        <img src="assets/welcome/img/services/nanta-1.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
                         <h3>Virgananta Saputra</h3>
                         <p>
-                            "Gas terus sampe pingsan"
+                            225150201111028
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="service-media">
-                        <img src="assets/welcome/img/services/service-3.jpg" alt=" " />
+                        <img src="assets/welcome/img/services/irul-1.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
                         <h3>Ahmad Jawahirul</h3>
                         <p>
-                            "Kurang ngaji"
+                            225150207111055
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="service-media">
-                        <img src="assets/welcome/img/services/service-4.jpg" alt=" " />
+                        <img src="assets/welcome/img/services/artur-1.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
                         <h3>Arthurito Keintjem</h3>
                         <p>
-                            "Rakha bisnis"
+                            225150207111047
                         </p>
                     </div>
                 </div>
@@ -382,8 +382,7 @@
                 <h2>Contact Us</h2>
                 <hr />
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-                    dapibus leonec.
+                    Anda dapat menghubungi kami melalui formulir di bawah ini atau melalui kontak yang tersedia.
                 </p>
             </div>
             <div class="col-md-10 col-md-offset-1 contact-info">
@@ -473,5 +472,4 @@
             <!-- <script type="text/javascript" src="assets/welcome/js/contact_me.js"></script> -->
             <script type="text/javascript" src="assets/welcome/js/main.js"></script>
 </body>
-
 </html>

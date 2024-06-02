@@ -11,9 +11,7 @@
         <meta property="og:image" content="https://teamtrees.org/images/social-share-earth-astronaut-1-9x1.png" />
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <!-- Google Fonts CSS -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet" />
         <link rel="shortcut icon" href="favicon.ico" />
@@ -21,6 +19,9 @@
         <link href="assets/dashboard/css/main.min.css" rel="stylesheet" />
         <link href="assets/dashboard/css/odometer.css" rel="stylesheet" />
         <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="assets/dashboard/css/style.css" />
+
         <title>GreenQuest</title>
 
         <style>
@@ -47,14 +48,14 @@
             }
 
             .news {
-                background-color: #CDE4E4;
+                background-color: #297045;
             }
 
             .treeDonation {
                 position: relative;
                 z-index: 1;
                 width: 400px;
-
+                font-family: 'Satoshi', sans-serif;
                 border-radius: 1em;
                 box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.322);
                 background-color: white;
@@ -66,7 +67,7 @@
             .form-background {
                 gap: 20px;
                 height: 100vh;
-                background-color: #2654;
+                background-color: #204E4A;
                 justify-content: center;
                 display: flex;
                 align-items: center;
@@ -81,7 +82,7 @@
                 justify-content: center;
                 gap: 0.3em;
                 margin: 1em;
-
+                font-family: 'Satoshi', sans-serif;
                 /* Mengatur margin agar lebih proporsional */
             }
 
@@ -95,7 +96,7 @@
                 border-radius: 0.51em;
                 color: white;
                 border: transparent;
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 font-size: 1em;
                 /* Menyesuaikan ukuran font agar proporsional dengan tombol yang lebih besar */
                 transition: ease-in-out 0.20s;
@@ -119,7 +120,7 @@
                 border-radius: 0.51em;
                 color: rgba(0, 0, 0, 0.726);
                 border: transparent;
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 font-size: 1em;
                 color: white;
 
@@ -137,6 +138,21 @@
             .map-image {
                 width: 100%;
                 height: auto;
+            }
+
+            .map-title {
+                position: absolute;
+                top: 120px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 24px;
+                font-weight: 600;
+                color: #2E3B55;
+                /* Dark color for contrast */
+                background: white;
+                padding: 10px 20px;
+                border-radius: 10px;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             }
 
             .label {
@@ -166,7 +182,7 @@
 
 
             input[type="text"] {
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 height: 2em;
                 margin: 0.5em;
                 /* Menyesuaikan margin agar lebih proporsional */
@@ -183,7 +199,7 @@
             input[type="submit"] {
                 background: #CDE4E4;
                 color: darkgreen;
-                font-family: 'PT Sans', sans-serif;
+                font-family: 'Satoshi', sans-serif;
                 padding: 1em 2em;
                 /* Menyesuaikan padding agar tombol lebih besar */
                 font-weight: bold;
@@ -192,7 +208,6 @@
 
                 /* Menyesuaikan margin agar lebih proporsional */
             }
-
 
             .news-content {
                 display: flex;
@@ -246,11 +261,28 @@
                 margin-top: 10px;
             }
 
-            .container {
-                margin-top: 30px;
+            #sumatera-container,
+            #kalimantan-container,
+            #sulawesi-container,
+            #papua-container,
+            #jawa-container {
+                padding-top: 80px;
             }
 
+            #sumatera-container h2,
+            #kalimantan-container h2,
+            #sulawesi-container h2,
+            #papua-container h2,
+            #jawa-container h2 {
+                color: white;
+                font-family: 'Satoshi', sans-serif;
+            }
 
+            .donate-button {
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+            }
 
             .counter-wrap {
                 margin-bottom: 1em;
@@ -268,8 +300,8 @@
 
         <!-- Animasi Map -->
         <script>
-            $(document).ready(function () {
-                $("#mapButton").click(function () {
+            $(document).ready(function() {
+                $("#mapButton").click(function() {
                     $('html, body').animate({
                         scrollTop: $("#map-container").offset().top
                     }, 1000); // Waktu dalam milidetik untuk animasi gulir (misalnya 1000ms)
@@ -279,30 +311,30 @@
 
         <!-- Menampilkan News berdasarkan Map -->
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 function loadNews(region) {
                     $.ajax({
                         url: '/news/' + region,
                         type: 'GET',
-                        success: function (data) {
+                        success: function(data) {
                             let newsContainer = $('#' + region + '-news');
                             newsContainer.empty();
 
                             data.forEach(news => {
                                 let newsHtml = `
-                        <div class="news-item">
-                            <h3>${news.title}</h3>
-                            <div class="trees-planted">${news.treePlanted.toLocaleString()} TREES</div>
-                            <div class="content">${news.content}</div>
-                            ${news.image ? `<img src="/storage/${news.image}" alt="${news.title}">` : ''}
-                            <div class="region">Region: ${news.region}</div>
-                            <div class="date">Date: ${new Date(news.created_at).toLocaleDateString()}</div>
-                        </div>
-                    `;
+                                    <div class="news-item">
+                                        <h3>${news.title}</h3>
+                                        <div class="trees-planted">${news.treePlanted.toLocaleString()} TREES</div>
+                                        ${news.image ? `<img class="news-image" src="/storage/${news.image}" alt="${news.title}">` : ''}
+                                        <div class="content">${news.content}</div>
+                                        <!-- <div class="region">Region: ${news.region}</div> -->
+                                        <div class="date">Date: ${new Date(news.created_at).toLocaleDateString()}</div>
+                                    </div>
+                                `;
                                 newsContainer.append(newsHtml);
                             });
                         },
-                        error: function (error) {
+                        error: function(error) {
                             console.log(error);
                         }
                     });
@@ -315,12 +347,11 @@
             });
         </script>
 
-
         <!-- Resize Map -->
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 function updateLabels() {
-                    $('.label').each(function () {
+                    $('.label').each(function() {
                         const top = $(this).data('top');
                         const left = $(this).data('left');
                         $(this).css({
@@ -330,62 +361,29 @@
                     });
                 }
 
-                $(window).on('resize', function () {
+                $(window).on('resize load', function() {
                     updateLabels();
                 });
 
                 updateLabels();
-            });
-        </script>
-
-
-        <!-- Resize Map -->
-        <script>
-            $(document).ready(function () {
-                function updateLabels() {
-                    $('.label').each(function () {
-                        const top = $(this).data('top');
-                        const left = $(this).data('left');
-                        $(this).css({
-                            top: top + '%',
-                            left: left + '%'
-                        });
-                    });
-                }
-
-                $(window).on('resize load', function () {
-                    updateLabels();
-                });
-
-                updateLabels();
-            });
-        </script>
-
-        <!-- Data donation -->
-        <script>
-            $(document).ready(function () {
-                $(".donate-button").click(function () {
-                    var amount = $(this).data('amount');
-                    $("#donationAmount").val(amount);
-                });
             });
         </script>
 
         <!-- Donate Other Amount -->
         <script>
-            $(document).ready(function () {
-                $(".donate-button").click(function () {
+            $(document).ready(function() {
+                $(".donate-button").click(function() {
                     var amount = $(this).data('amount');
                     $("#donationAmount").val(amount);
                     $("#customAmount").val(''); // Clear the custom amount input
                 });
 
-                $("#customAmount").on('input', function () {
+                $("#customAmount").on('input', function() {
                     var customAmount = $(this).val();
                     $("#donationAmount").val(customAmount);
                 });
 
-                $("#donationForm").submit(function (e) {
+                $("#donationForm").submit(function(e) {
                     var amount = $("#donationAmount").val();
                     if (!amount || amount <= 0) {
                         e.preventDefault();
@@ -411,8 +409,7 @@
                         <div class="text-center intro-copy">
                             <h1 class="text-uppercase d-none">#teamtrees</h1>
                             <h1 class="text-center">
-                                <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees"
-                                    src="assets/dashboard/images/GQ.png" />
+                                <img class="team-trees-logo" alt="#teamtrees" title="#teamtrees" src="assets/dashboard/images/GQ.png" />
                             </h1>
                             <p class="lead mb-2">
                                 Bantu kami raih 150 ribu pohon untuk
@@ -423,8 +420,7 @@
                                 <div id="totalTrees" class="counter odometer"></div>
                                 <div class="measure-wrap">
                                     <span class="text-uppercase letter-spacing" style="top: 4px">Total Donation</span>
-                                    <img class="counter-underline"
-                                        src="assets/dashboard/images/counter-underline-blue.svg" />
+                                    <img class="counter-underline" src="assets/dashboard/images/counter-underline-blue.svg" />
                                     <br />
                                 </div>
                             </div>
@@ -458,16 +454,16 @@
 
         <div class="form-background" id="form-background">
             <div class="treeDonation" id="treeDonation">
-                <p style="padding: 0.5em 0; font-family: 'PT Sans', sans-serif; font-weight: bold; font-size: 24px;">
+                <p style="padding: 0.5em 0; font-family: 'Satoshi', sans-serif; font-weight: bold; font-size: 24px;">
                     Choose your option
                 </p>
-                <form id="donationForm" method="POST" action="{{ route('donate') }}">
+                <form id="donationForm" method="POST" action="{{ route('donate') }}" style="font-family: 'Satoshi', sans-serif;">
                     @csrf
                     <div class="btns">
-                        <button type="button" class="donate-button" data-amount="1">1 <br>Trees</button>
-                        <button type="button" class="donate-button" data-amount="5">5 <br>Trees</button>
-                        <button type="button" class="donate-button" data-amount="20">20 <br>Trees</button>
-                        <button type="button" class="donate-button" data-amount="50">50 <br>Trees</button>
+                        <button type="button" class="donate-button" data-amount="1">1 Trees</button>
+                        <button type="button" class="donate-button" data-amount="5">5 Trees</button>
+                        <button type="button" class="donate-button" data-amount="20">20 Trees</button>
+                        <button type="button" class="donate-button" data-amount="50">50 Trees</button>
                         <input type="text" id="customAmount" name="customAmount" placeholder="Other amount">
                         <input type="hidden" id="donationAmount" name="amount" value="">
                         <input type="submit" value="Submit">
@@ -483,6 +479,7 @@
 
 
         <div id="map-container" class="map-container">
+            <h2 class="map-title">Persebaran Penanaman Pohon di Indonesia</h2>
             <img src="assets/dashboard/images/peta-indo.png" alt="Peta Indonesia" class="map-image">
             <a href="#sumatera-container" class="label" data-top="43.5" data-left="27.7">Sumatera</a>
             <a href="#kalimantan-container" class="label" data-top="40.8" data-left="43.2">Kalimantan</a>
@@ -521,17 +518,17 @@
 
         <!-- Total Amount Odomater -->
         <script type="text/javascript">
-            $(document).ready(function () {
-                setInterval(function () {
+            $(document).ready(function() {
+                setInterval(function() {
                     $.ajax({
                         url: '/donations/sum', // replace with your endpoint
                         type: 'GET',
-                        success: function (data) {
+                        success: function(data) {
                             // Assuming the server returns the new total trees count
                             var totalTrees = $('#totalTrees');
                             totalTrees.html(data.sum); // Odometer uses innerHTML instead of text()
                         },
-                        error: function (error) {
+                        error: function(error) {
                             console.log(error);
                         }
                     });
@@ -540,9 +537,9 @@
         </script>
 
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 // Add click event listener to the labels
-                $('#map-container .label').on('click', function (e) {
+                $('#map-container .label').on('click', function(e) {
                     e.preventDefault();
 
                     // Get the region from the text of the label
