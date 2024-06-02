@@ -195,7 +195,7 @@
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="service-media">
-                        <img src="assets/welcome/img/services/service-2.jpg" alt=" " />
+                        <img src="assets/welcome/img/services/nanta-1.jpg" alt=" " />
                     </div>
                     <div class="service-desc">
                         <h3>Virgananta Saputra</h3>
